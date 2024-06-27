@@ -1,0 +1,284 @@
+body {
+  overflow-x: hidden;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+
+#canvas_container {
+  width: 80%;
+  /* Increased the width to 80% */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#arrow_canvas {
+  border: 2px solid #299bd2a1;
+  max-width: 100%;
+  /* Ensure canvas doesn't exceed container width */
+  width: 100%;
+  /* Set the width to 100% */
+  max-height: 550px;
+  /* Set the maximum height to 445 pixels */
+}
+
+
+#arrow_list {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#arrow_list span {
+  color: red;
+  display: none;
+}
+
+.arrow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.7%;
+  width: 72%;
+}
+
+.arrow-input-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.arrow-container input {
+  border: 1px solid #ccc;
+  width: calc(95% - 5px);
+  box-shadow: 3px 3px 2px 0px #a0a8ac;
+}
+
+.arrow-label {
+  font-size: 18px;
+  width: 5%;
+}
+
+
+
+.arrow-field {
+  font-size: 16px;
+  padding: 1% 1%;
+  border-radius: 5px;
+  outline: none;
+  width: 97.8%;
+}
+
+#image_upload {
+  margin-top: 1%;
+  padding: 1.2%;
+  font-size: 16px;
+  background-color: #2596e0e6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#image_upload:hover {
+  background-color: #2980b9;
+}
+
+.color-button {
+  margin: 0% 2% 4% 2%;
+  cursor: pointer;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+#color_button_red {
+  background-color: red;
+}
+
+#color_button_blue {
+  background-color: blue;
+}
+
+#color_button_black {
+  background-color: black;
+}
+
+#color_button_green {
+  background-color: green;
+}
+
+#color_button_yellow {
+  background-color: yellow;
+}
+
+#open_modal_btn {
+  margin-bottom: 1.5%;
+}
+
+/* Add styles for the modal */
+.modal {
+  display: none;
+  /* position: fixed; */
+  /* top: 0; */
+  /* left: 0; */
+  width: 100%;
+  /* height: 100%; */
+  /* background-color: rgb(34 33 33); */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  /* background-color: white; */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  /* max-height: 90vh; */
+  /* overflow-y: auto; */
+  width: 95%;
+}
+
+#close_modal_btn {
+  padding: 6px 30px;
+}
+
+/* Style for the impressive text button */
+.impressive-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 6px 21px;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.impressive-button:hover {
+  background-color: #2980b9;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1%;
+}
+
+.input-user-answer {
+  outline: none;
+  border: 1px solid black;
+  margin-right: 0.5%;
+  box-shadow: 3px 3px 2px 0px #a0a8ac;
+}
+
+.input-hidden-answer {
+  border: 1px solid black;
+  padding-left: 1%;
+}
+
+.model-input-label {
+  width: 4%;
+}
+
+.input-default-answer {
+  border: 1px solid black;
+  box-shadow: 3px 3px 2px 0px #a0a8ac;
+
+}
+
+#remove_last_arrow_button {
+  margin-bottom: 4%;
+  border-radius: 4px;
+}
+
+.new-text-input {
+  position: absolute;
+  z-index: 1000;
+  height: 2rem;
+  background: #ead26b;
+  color: #ead26b;
+  border: 1px solid #aca06d;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.new-text-input:hover {
+  background: none;
+  color: black;
+  border: 1px solid black;
+  font-size: 1.2rem;
+  width: 13.2%;
+}
+
+#modal_image_container {
+  position: relative;
+}
+
+@media screen and (min-width:900px) {
+  h1 {
+    margin: 5px;
+  }
+
+  .color-button {
+    margin: 0% 2% 4% 2%;
+    cursor: pointer;
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .arrow-label {
+    font-size: 16px;
+    width: 10%;
+  }
+
+  #canvas_container {
+    width: 92%;
+  }
+
+  #arrow_list {
+    margin-top: 4%;
+  }
+
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  #modal_image {
+    width: 100%;
+  }
+
+  .new-text-input {
+    position: absolute;
+    z-index: 1000;
+    height: 1rem;
+    background: #ead26b;
+    color: #ead26b;
+    border: 1px solid #aca06d;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    width: 14%;
+  }
+
+  .new-text-input:hover {
+    font-size: 0.7rem;
+    width: 13.2%;
+  }
+}

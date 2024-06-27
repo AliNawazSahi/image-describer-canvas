@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Describer</title>
+  <link rel="stylesheet" href="style.css?v=2.1">
+</head>
+
+<body>
+  <div id="canvas_container">
+    <input type="file" id="image_upload" accept="image/*" />
+    <div>
+      <h1>Pick color for Arrow</h1>
+      <button class="color-button" id="color_button_red"></button>
+      <button class="color-button" id="color_button_blue"></button>
+      <button class="color-button" id="color_button_black"></button>
+      <button class="color-button" id="color_button_green"></button>
+      <button class="color-button" id="color_button_yellow"></button>
+      <button class="impressive-button" id="remove_last_arrow_button">Erase Arrow</button>
+    </div>
+    <div>
+      <canvas id="arrow_canvas" width="1000" height="445"></canvas>
+    </div>
+
+    <div id="arrow_list" class="arrow-field">
+      <!-- Arrow text fields will be dynamically added here -->
+    </div>
+    <button id="open_modal_btn" class="impressive-button">Test</button>
+  </div>
+
+  <!-- The modal structure -->
+  <div id="my_modal" class="modal">
+    <div class="modal-content">
+      <!-- Add content for the new page here -->
+      <div id="modal_image_container">
+        <img id="modal_image" src="" alt="User's Image">
+        <div id="modal_image_inputs_container">
+          <!-- fourth inputs displayed here -->
+        </div>
+      </div>
+      <div id="modal_arrow_list" class="arrow-field">
+        <!-- Arrow text fields corresponding to arrows drawn will be displayed here -->
+      </div>
+      <button id="check_result" class="impressive-button">Result</button>
+      <button id="close_modal_btn" class="impressive-button">Back</button>
+    </div>
+  </div>
+
+  <script src="image.js?v=2.1"></script>
+
+
+</body>
+
+</html>
